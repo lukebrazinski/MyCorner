@@ -1,0 +1,160 @@
+<!DOCTYPE HTML>
+<html lang='en'>
+
+<head>
+	<title> MyCorner </title>
+    <meta name="description" content="starter page for MyCorner"/>
+        
+<style>
+    .header {
+        float: left;
+        cursor: pointer;
+        text-align: center;
+        color: black;
+        border: black;
+        outline: thin;
+        padding: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 30px;
+                
+        margin: 0;
+    }
+    .header a:hover {
+        font-weight: bold;
+    }
+    .topnav {
+        width: 100%;
+        overflow: hidden;
+        background-color: white;
+        border-bottom-style: solid;
+        margin: 0;
+        border-width: medium;
+    }
+    .topnav a {
+        float: left;
+        color: black;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 30px;
+    }
+    .topnav a:hover {
+        background-color: gray;
+        color: black;
+    }
+    .topnav a.active {
+        background-color: white;
+        color: black;
+    }
+
+    .dropdown {
+        float: left;
+        overflow: hidden;
+    }
+
+    .dropdown .dropbtn {
+        float: left;
+        cursor: pointer;
+        font-size: 25px;
+        border: black;
+        border-style: solid;
+        border-width: thin;
+        outline: black;
+        color: black;
+        padding: 5px 20px ;
+        background-color: white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+    }
+    .topnav a:hover, .header:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+        background-color: white;
+        font-weight: bolder;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: white;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    }
+    .dropdown-content a{
+        float: none;
+        font-size: 25px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: center;
+    }
+    .dropdown-content a:hover {
+        background-color: white;
+    }
+    .show {
+        display: block;
+    }
+    .topnav input[type=text] {
+        float:center;
+        padding: 18px;
+        border: black;
+        margin-top: 8px;
+        margin-right: 16px;
+        margin-left: 300px;
+        font-size: 17px;
+    }
+</style>
+</head>
+    <body>
+        <!-- Nav Bar-->
+        <div class='topnav'>
+            <h1 class="header"><a class="active" href="index.html">&ltMyCorner&gt</a></h1>
+            <input type="text" placeholder="Search..">
+        <div class="dropdown">
+            <button class="dropbtn" onclick="dropbtnfcn()">Medium &downarrow;
+                <i class="fa fa-caret-down"></i>
+            </button>
+        <div class="dropdown-content" id="myDropdown">
+            <a href="#">All</a>
+            <a href="#">Visual</a>
+            <a href="#">Musical</a>
+            <a href="#">Literary</a>
+        </div>
+        </div>
+        
+        </div>
+        <style>
+            
+        </style>
+        <!-- Header -->
+        
+        <h1><a href="index.html"></a></h1>
+        <nav id="nav">
+            <ul>
+                
+                
+
+            </ul>
+        </nav>
+
+    <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function dropbtnfcn() {
+            document.getElementById("myDropdown").classList.toggle("show");
+
+        }
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(e) {
+            if (!e.target.matches('.dropbtn')) {
+                var myDropdown = document.getElementById("myDropdown");
+                    if (myDropdown.classList.contains('show')) {
+                        myDropdown.classList.remove('show');
+                    }
+                }
+        }
+        
+    </script>
+
+    </body>
+
+</html>
